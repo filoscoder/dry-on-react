@@ -14,15 +14,17 @@ As the name of the repository, this is a personal & public space to achieve a co
 This is a spontaneous and useful collection of functions that solves concurrently annoying problems for Js & React devs.
 <br/><br/>
 
-
 # DRY (Don't Repeat Yourself)
+
 I'm a freelance Software Engineer, my stack is Javascript & React.
 After some time working on different projects, I found myself facing the same problems and solving them with the same pattern.
 This is a repository for saving valuable time and stay as DRY as possible while working.
 <br/><br/>
 
 # Examples
+
 ### Phone number formatter (Js)
+
 ```javascript
 // Parameter> $inputValue: string
 // Output> "xxx-xxxx-xxxx"
@@ -32,32 +34,113 @@ export const phoneMask = (inputValue = "") =>
     .replace(/(\d{1,3})(\d{1,4})?(\d{1,4})?/g, function (_, a, b, c) {
       return c ? `${a}-${b}-${c}` : b ? `${a}-${b}` : `${a}`;
     });
-```
-
-### URL Query parser (React)
-```javascript
-import { useLocation } from "react-router-dom";
-import { useMemo } from "react";
-
-export const useQuery = () => {
-const location = useLocation();
-return useMemo(() => new URLSearchParams(location.search), [location]);
-}
-
 
 /*
 
 # Usage
-import { useQuery } from "./utils";
+import { phoneMask } from "./dry";
 
+.
+.
+.
 
-## URL > https://github.com/filoscoder/js-react-utils/new/main?readme=1
-const readme = useQuery.get("readme"); // Output > 1
+<input type="tel" value={phoneMask(userPhone)} />
+// Input > "01022223333"
+// Output > "010-2222-3333"
+
+*/
+```
+
+### useInputs (React - Custom hook)
+
+```typescript
+import React, { useCallback, useReducer } from "react";
+
+type DefaultValues = {
+  [key: string]: string;
+};
+type UseInputsAction = {
+  name: string;
+  value: string;
+};
+
+function reducer<T>(state: T, action: UseInputsAction | null) {
+  if (!action) {
+    const initialState: any = {};
+    Object.keys(state).forEach((key) => {
+      initialState[key] = "";
+    });
+
+    return initialState;
+  }
+
+  return {
+    ...state,
+    [action.name]: action.value,
+  };
+}
+
+export default function useInputs<T>(defaultValues: DefaultValues) {
+  const [state, dispatch] = useReducer(reducer, defaultValues);
+  const onChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      dispatch({
+        name: e.target.name,
+        value: e.target.value,
+      });
+    },
+    []
+  );
+  const onReset = useCallback(() => {
+    dispatch(null);
+  }, []);
+
+  return [state, dispatch, onChange, onReset] as [
+    T,
+    typeof dispatch,
+    typeof onChange,
+    typeof onReset
+  ];
+}
+
+/*
+
+# Usage
+import { useInputs } from "./dry";
+
+.
+.
+.
+// React component
+const [form, onChange] = useInputs<MyFormType>({
+    email: '',
+    password: '',
+});
+.
+.
+.
+// Render => Form JSX
+<form>
+  <input 
+    type="email"
+    name="email"
+    value={form.email}
+    onChange={onChange}
+  />
+  <input
+    type="password"
+    name="password"
+    value={form.password}
+    onChange={onChange}
+  />
+</form>
 
 */
 ```
 
 # Contribution
+
 There is no structure on this repo, if you want to benefit from this repo give a `STAR` or `FORK` it!
 Otherwise, if you want to add your piece, please don't hesitate and send me a PR!
+
 - Please specify the enviroment: `React` | `Javascript`
