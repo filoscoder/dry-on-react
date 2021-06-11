@@ -1,11 +1,11 @@
 <p align="center" width="100%">
-<img src="https://user-images.githubusercontent.com/50701501/121663369-a5349280-caa6-11eb-905a-b32f19afc276.png" />
-  </p>
+  <img src="https://user-images.githubusercontent.com/50701501/121663369-a5349280-caa6-11eb-905a-b32f19afc276.png" />
+</p>
 
 <p align="center" width="100%">
-<img src="https://img.shields.io/github/stars/filoscoder/js-react-dry?style=social" />
-<img src="https://img.shields.io/github/forks/filoscoder/js-react-dry?style=social" />
-  </p>
+  <img src="https://img.shields.io/github/stars/filoscoder/js-react-dry?style=social" />
+  <img src="https://img.shields.io/github/forks/filoscoder/js-react-dry?style=social" />
+</p>
 
 
 As the name of the repository, this is a personal & public space to achieve a collection of helper functions.
