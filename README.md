@@ -58,6 +58,6 @@ const readme = useQuery.get("readme"); // Output > 1
 ```
 
 # Contribution
-There is no structure on this repo, if you want to benefit from this repo give a STAR or FORK it!
+There is no structure on this repo, if you want to benefit from this repo give a `STAR` or `FORK` it!
 Otherwise, if you want to add your piece, please don't hesitate and send me a PR!
-- Please specify the enviroment: React | Javascript
+- Please specify the enviroment: `React` | `Javascript`
