@@ -16,7 +16,7 @@ This is a spontaneous and useful collection of functions that solves concurrentl
 
 # DRY (Don't Repeat Yourself)
 
-I'm a freelance Software Engineer, my stack is Javascript & React.
+I'm a freelance Software Engineer, my stack is Typescript & React.
 After some time working on different projects, I found myself facing the same problems and solving them with the same pattern.
 This is a repository for saving valuable time and stay as DRY as possible while working.
 <br/><br/>
@@ -143,4 +143,3 @@ const [form, onChange] = useInputs<MyFormType>({
 There is no structure on this repo, if you want to benefit from this repo give a `STAR` or `FORK` it!
 Otherwise, if you want to add your piece, please don't hesitate and send me a PR!
 
-- Please specify the enviroment: `React` | `Javascript`
