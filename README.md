@@ -6,7 +6,9 @@
   <img src="https://img.shields.io/github/stars/filoscoder/js-react-dry?style=social" />
   <img src="https://img.shields.io/github/forks/filoscoder/js-react-dry?style=social" />
 </p>
-
+<p align="center" width="100%">
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ffiloscoder%2Fjs-react-dry&count_bg=%23007FEF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+</p>
 
 As the name of the repository, this is a personal & public space to achieve a collection of helper functions.
 This is a spontaneous and useful collection of functions that solves concurrently annoying problems for Js & React devs.
