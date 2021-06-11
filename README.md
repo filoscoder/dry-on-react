@@ -1,6 +1,6 @@
-# Js-React-Utils
-![GitHub stars](https://img.shields.io/github/stars/filoscoder/js-react-utils?style=social)
-![GitHub forks](https://img.shields.io/github/forks/filoscoder/js-react-utils?style=social)
+# Js-React-dry
+![GitHub stars](https://img.shields.io/github/stars/filoscoder/js-react-dry?style=social)
+![GitHub forks](https://img.shields.io/github/forks/filoscoder/js-react-dry?style=social)
 
 
 As the name of the repository, this is a personal & public space to achieve a collection of helper functions.
@@ -52,4 +52,5 @@ const readme = useQuery.get("readme"); // Output > 1
 
 # Contribution
 There is no structure on this repo, if you want to benefit from this repo give a STAR or FORK it!
-Otherwise you want to add your piece, please don't hesitate and send me a PR!
+Otherwise, if you want to add your piece, please don't hesitate and send me a PR!
+- Please specify the enviroment: React | Javascript
