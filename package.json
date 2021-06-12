@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "react": "^17.0.2"
-  }
+  },
+  "name": "dry-on-react",
+  "description": "<p align=\"center\" width=\"100%\">   <img src=\"https://user-images.githubusercontent.com/50701501/121663369-a5349280-caa6-11eb-905a-b32f19afc276.png\" /> </p>",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filoscoder/dry-on-react.git"
+  },
+  "author": "filoscoder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filoscoder/dry-on-react/issues"
+  },
+  "homepage": "https://github.com/filoscoder/dry-on-react#readme"
 }
