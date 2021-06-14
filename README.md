@@ -112,7 +112,7 @@ import { useInputs } from "./dry";
 .
 .
 // React component
-const [form, onChange] = useInputs<MyFormType>({
+const [form, dispatch, onChange] = useInputs<MyFormType>({
     email: '',
     password: '',
 });
@@ -125,7 +125,12 @@ const [form, onChange] = useInputs<MyFormType>({
     type="email"
     name="email"
     value={form.email}
-    onChange={onChange}
+    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+      dispatch({
+        name: e.target.name,
+        value: e.target.value,
+      });
+    }}
   />
   <input
     type="password"
